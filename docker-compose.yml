@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: "postgres"
+    container_name: "mypostgresdb"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+
+  app:
+    build: .
+    container_name: "myipbot"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

@@ -1,0 +1,13 @@
+port: "8000"
+
+db:
+  username: "postgres"
+  host: "db"
+  port: "5432"
+  password: "mysecretpassword"
+  dbname: "postgres"
+  sslmode: "disable"
+
+telegramBotToken : " "
+ipStackAccessKey : " "
+webhookURL : " "
