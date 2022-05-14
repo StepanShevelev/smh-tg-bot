@@ -82,7 +82,7 @@ func checkIp(ip string) (*ipstack.InfoIP, bool) {
 func ipInfoPp(info *ipstack.InfoIP) string {
 	if info.CountryName == "" {
 		ret := "ip = " + info.Ip + "\n" +
-			"Don't found"
+			"Not found"
 		return ret
 	}
 	ret := "IP = " + info.Ip + "\n" +
@@ -115,5 +115,5 @@ func checkUserHistory(user *tgbotapi.User, ip string) {
 	log.WithFields(log.Fields{
 		"UserID": user.ID,
 		"IP":     ip,
-	}).Info("Ip already exist in user history")
+	}).Info("Ip already exists in user history")
 }

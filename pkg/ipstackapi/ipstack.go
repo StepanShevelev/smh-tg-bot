@@ -19,7 +19,7 @@ func getJson(url string, target interface{}) error {
 		return err
 	}
 	defer r.Body.Close()
-	log.Info("Decode recive data to InfoIP struct")
+	log.Info("Decode receive data to InfoIP struct")
 	return json.NewDecoder(r.Body).Decode(target)
 }
 

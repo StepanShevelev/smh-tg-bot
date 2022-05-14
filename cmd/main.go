@@ -30,7 +30,6 @@ func main() {
 	go tlg.BotServe(bot, update, exitCh)
 	tgapi.InitBackendApi(config)
 	http.ListenAndServe(":"+config.Port, nil)
-
 	signal.Notify(c, os.Interrupt)
 	<-c
 	exitCh <- struct{}{}

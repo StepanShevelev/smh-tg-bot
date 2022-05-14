@@ -98,6 +98,6 @@ func unknown(text string, user *tgbotapi.User,
 		"UserName": user.UserName,
 		"IsAdmin":  isAdmin,
 		"Text":     text,
-	}).Warn("Unknow request")
+	}).Warn("Unknown request")
 	return "I don't know that command, try \"/help\""
 }
